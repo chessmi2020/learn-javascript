@@ -71,3 +71,13 @@ console.log("0번째 데이터 ==>", person["age"]);
 
 console.log("company", person["company"]);
 console.log("company", person.company); //닷 표기법 권장
+
+//객체(object)로 이루어진 배열, 객체안은 요소로 이루어짐
+const messageInfo = {
+  userImage:
+    "https://img1.daumcdn.net/thumb/S1200x630/?fname=https://t1.daumcdn.net/news/202508/01/NEWS1/20250801094638891gsqh.jpg",
+  username: "맛있는 셰프",
+  message: "안녕하세요. 객체 강의중입니다.",
+  role: "assistant",
+};
+console.log("요소 타입: ", messageInfo.message);
