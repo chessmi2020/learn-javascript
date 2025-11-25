@@ -42,12 +42,32 @@ console.log("age type:", typeof age);
  * 함수(재사용성) - 코드를 묶는 방법을 알려줄거야
  */
 // 함수정의/선언
-function sayHello() {
-  // 살행할 로직들 작성
-  console.log("Hello World");
+
+//   // 살행할 로직들 작성
+//   console.log(
+//     "반갑습니다. " + username + "님" + "mbti는 " + usermbti + "이시군요"
+//   );
+// }
+function sayHello(username, usermbti) {
+  console.log(`반갑습니다.  ${username}님! 
+  MBTI는 ${usermbti}이시군요!`);
 }
 
+//벡틱 : 문자열
+
 // 함수 실행/호츨
-sayHello();
-sayHello();
-sayHello();
+const data = "홍길동";
+sayHello("후츠릿", "ENTJ");
+sayHello(data, "INTJ");
+
+// 미션 이름 MBTI 넣어서 호출
+sayHello("똘똘이", "ENTJ");
+
+// return (반환) 반화도 하지만 함수를 종료시키는 역할도 함
+function sum(num1, num2) {
+  // 두개의 값을 더한값 반화
+  return num1 + num2;
+  console.log("함수 종료"); //<절대 실행안됨.위 return 종료
+}
+const result = sum(22, 40);
+console.log("결과값", result);
