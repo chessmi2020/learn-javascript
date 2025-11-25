@@ -64,10 +64,35 @@ sayHello(data, "INTJ");
 sayHello("똘똘이", "ENTJ");
 
 // return (반환) 반화도 하지만 함수를 종료시키는 역할도 함
-function sum(num1, num2) {
-  // 두개의 값을 더한값 반화
-  return num1 + num2;
-  console.log("함수 종료"); //<절대 실행안됨.위 return 종료
-}
+// function sum(num1, num2) {
+//   // 두개의 값을 더한값 반화
+//   return num1 + num2;
+//   console.log("함수 종료"); //<절대 실행안됨.위 return 종료
+// }
+
+// 화살표 함수로 변환 sum = (파라미터1,파라미터2) => {실행할 구문에 return 생략}
+// 화살표 함수 기본 구분 const upperString = () => {}
+
+const sum = (num1, num2) => num1 + num2;
+
+// 험수 호출
 const result = sum(22, 40);
 console.log("결과값", result);
+
+// 미션: upperString라는 화살표 함수 만들기
+// 기능:1. 파라미터로 받아온 문자열을 대문자로 변환
+//     2. 변환한 문자열을 반환
+// 실행
+
+const upperString = (text) => {
+  // return text.toUpperCase();
+
+  //1. 파라미터로 받아온 문자열을 대문자로 변환
+  const upper = text.toUpperCase();
+  //2. 변환한 문자열을 반환
+  return upper;
+};
+
+const resultString = upperString("chutzrit");
+console.log("resultString", resultString);
+console.log("resultString", upperString("dasom"));
